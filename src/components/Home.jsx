@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import IncreaseAge from "./IncreaseAge";
+import Todos from "./Todos";
 
 
 const Home = () => {
@@ -37,6 +38,7 @@ const Home = () => {
     <p>{JSON.stringify(state)}</p>
     <input type="text" onChange={(e) =>setName(e.target.value)} placeholder="name" />
     <IncreaseAge />
+    <Todos />
   </div>;
 };
 
