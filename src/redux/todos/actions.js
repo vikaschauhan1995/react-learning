@@ -1,4 +1,4 @@
-import { ADD_TODO, FETCH_TODOS, GET_TODOS_FROM_LOCALSTORAGE } from "./constants";
+import { ADD_TODO, FETCH_TODOS, GET_TODOS_FROM_LOCALSTORAGE, REMOVE_TODO } from "./constants";
 
 export function fetchTodos() {
     return {
@@ -9,6 +9,13 @@ export function fetchTodos() {
 export function addTodo(todo) {
     return {
         type: ADD_TODO,
+        payload: todo
+    }
+}
+
+export function removeTodo(todo) {
+    return {
+        type: REMOVE_TODO,
         payload: todo
     }
 }
